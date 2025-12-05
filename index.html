@@ -62,72 +62,19 @@ a.card {
 </head>
 <body>
     <h1>My Projects</h1>
-  <div class="grid-container">
-    <div class="card" onclick="goToProject('1.html')">
-      <img src="https://raw.githubusercontent.com/AndrewKenardi/esp32/main/imagePreview/ESP32.png" alt="Project 1">
-      <h2>Real-Time Monitoring Dengan ESP32</h2>
-      <p>Sistem real-time monitoring gas dan temperatur menggunakan MQ2 dan DHT22 dengan ESP32.</p>
-    </div>
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 2">
-      <h2>Projek 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </div>
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 3">
-      <h2>Projek 3</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </div>
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 3">
-      <h2>Projek 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+ 
+    <div class="card" onclick="goToProject('2.html')">
+        <img src="" alt="">
+        <h2>Conveyor Belt Real-Time Monitoring</h2>
+
     </div>
 
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 3">
-      <h2>Projek 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 3">
-      <h2>Projek 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://placehold.co/300x180" alt="Project 3">
-      <h2>Projek 5</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </div>
   </div>
 </body>
 </html>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
- const firebaseConfig = {
-  apiKey: "AIzaSyA1rEsRrEAooYPvx9DXB5Z_1kP6f2kM3q4",
-  authDomain: "esp32-4394c.firebaseapp.com",
-  databaseURL: "https://esp32-4394c-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "esp32-4394c",
-  storageBucket: "esp32-4394c.firebasestorage.app",
-  messagingSenderId: "434807405847",
-  appId: "1:434807405847:web:8f63bf6703a3c4bc9c8b52"
-};
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  window.goToProject = function(targetUrl) {
-    const user = auth.currentUser;
-    if (user) {
-      window.location.href = targetUrl;
-    } else {
-      localStorage.setItem('redirectAfterLogin', targetUrl);
-      window.location.href = './adminAuth.html';
+<script>
+    function goToProject(){
+        
     }
-  }
 </script>
